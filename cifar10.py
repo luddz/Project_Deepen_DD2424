@@ -14,9 +14,11 @@ from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 import os
 
+import matplotlib.pyplot as plt
+
 batch_size = 32
 num_classes = 10
-epochs = 100
+epochs = 10
 data_augmentation = False
 num_predictions = 20
 save_dir = os.path.join(os.getcwd(), 'saved_models')
@@ -161,3 +163,22 @@ print('Saved trained model at %s ' % model_path)
 scores = model.evaluate(x_test, y_test, verbose=1)
 print('Test loss:', scores[0])
 print('Test accuracy:', scores[1])
+
+
+# Plot training & validation accuracy values
+plt.plot(history.history['acc'])
+plt.plot(history.history['val_acc'])
+plt.title('Model accuracy')
+plt.ylabel('Accuracy')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Test'], loc='upper left')
+plt.show()
+
+# Plot training & validation loss values
+plt.plot(history.history['loss'])
+plt.plot(history.history['val_loss'])
+plt.title('Model loss')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Test'], loc='upper left')
+plt.show()
