@@ -13,6 +13,7 @@ batch_size = 32
 num_classes = 10
 epochs = 10
 data_augmentation = False
+dropout = False
 num_predictions = 20
 save_dir = os.path.join(os.getcwd(), 'saved_models')
 model_name = 'keras_cifar10_trained_model.h5'
@@ -61,22 +62,22 @@ model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
 model.add(Flatten())
 # 1st Fully Connected Layer
 model.add(Dense(512))
-model.add(Activation('tanh'))
+model.add(Activation('relu'))
 
 # Add Dropout to prevent overfitting
-#model.add(Dropout(0.4))
+if dropout: model.add(Dropout(0.4))
 
 # 2nd Fully Connected Layer
-model.add(Dense(256))
-model.add(Activation('tanh'))
+model.add(Dense(512))
+model.add(Activation('relu'))
 # Add Dropout
-#model.add(Dropout(0.4))
+if dropout: model.add(Dropout(0.4))
 
 # 3rd Fully Connected Layer
-#model.add(Dense(1000))
-#model.add(Activation('relu'))
+model.add(Dense(256))
+model.add(Activation('relu'))
 # Add Dropout
-#model.add(Dropout(0.4))
+if dropout: model.add(Dropout(0.4))
 
 # Output Layer
 model.add(Dense(10))
