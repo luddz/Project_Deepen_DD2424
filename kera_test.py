@@ -11,7 +11,7 @@ import os
 
 batch_size = 32
 num_classes = 10
-epochs = 3
+epochs = 10
 save_dir = os.path.join(os.getcwd(), 'saved_models')
 model_name = 'keras_cifar10_trained_model.h5'
 
@@ -100,4 +100,4 @@ plt.xlabel('Epoch')
 plt.legend(['Train', 'Test'], loc='upper left')
 plt.show()
 
-plot_model(model, to_file='model.png')
+# plot_model(model, to_file='model.png')
