@@ -62,20 +62,20 @@ model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
 model.add(Flatten())
 # 1st Fully Connected Layer
 model.add(Dense(512))
-model.add(Activation('relu'))
+model.add(Activation('tanh'))
 
 # Add Dropout to prevent overfitting
 if dropout: model.add(Dropout(0.4))
 
 # 2nd Fully Connected Layer
 model.add(Dense(512))
-model.add(Activation('relu'))
+model.add(Activation('tanh'))
 # Add Dropout
 if dropout: model.add(Dropout(0.4))
 
 # 3rd Fully Connected Layer
 model.add(Dense(256))
-model.add(Activation('relu'))
+model.add(Activation('tanh'))
 # Add Dropout
 if dropout: model.add(Dropout(0.4))
 
