@@ -5,6 +5,8 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential, load_model
 from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Conv2D, MaxPooling2D
+from keras.layers.normalization import BatchNormalization
+
 import os
 
 import matplotlib.pyplot as plt
@@ -62,6 +64,7 @@ model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
 model.add(Flatten())
 # 1st Fully Connected Layer
 model.add(Dense(512))
+model.add(BatchNormalization())
 model.add(Activation('relu'))
 
 # Add Dropout to prevent overfitting
@@ -69,12 +72,14 @@ if dropout: model.add(Dropout(0.4))
 
 # 2nd Fully Connected Layer
 model.add(Dense(512))
+model.add(BatchNormalization())
 model.add(Activation('relu'))
 # Add Dropout
 if dropout: model.add(Dropout(0.4))
 
 # 3rd Fully Connected Layer
 model.add(Dense(256))
+model.add(BatchNormalization())
 model.add(Activation('relu'))
 # Add Dropout
 if dropout: model.add(Dropout(0.4))
