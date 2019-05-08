@@ -80,6 +80,28 @@ Test loss = 0.8409
 Acc graph name = acc_3-fully-relu-norm_w_dropout.png
 Loss graph name =  loss_3-fully-relu-norm_w_dropout.png
 
+
+## 3 fully connected layers - relu activation - without dropout - with normalization
+Training accuracy = 0.9240
+Training loss = 0.2218
+
+Validation accuracy = 0.7444
+Validation loss = 0.9206
+
+Test accuracy = 0.7444
+Test loss = 0.9206
+
+Acc graph name = acc_3-fully-relu-norm_w_dropout.png
+Loss graph name =  loss_3-fully-relu-norm_w_dropout.png
+
+## final model
+test acc = 0.7538
+test loss = 1.4581
+
+training loss = 0.0681
+training acc = 0.9800
+
+
 # Keras example CNN
 The training is done on 10 epochs
 ## 0.25 dropout
