@@ -88,7 +88,7 @@ plt.plot(history.history['val_acc'])
 plt.title('Model accuracy')
 plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
-plt.legend(['Train', 'Test'], loc='upper left')
+plt.legend(['Train', 'Val'], loc='upper left')
 plt.show()
 
 # Plot training & validation loss values
@@ -97,7 +97,7 @@ plt.plot(history.history['val_loss'])
 plt.title('Model loss')
 plt.ylabel('Loss')
 plt.xlabel('Epoch')
-plt.legend(['Train', 'Test'], loc='upper left')
+plt.legend(['Train', 'Val'], loc='upper left')
 plt.show()
 
 # plot_model(model, to_file='model.png')
