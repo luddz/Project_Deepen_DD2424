@@ -4,8 +4,8 @@
 Training accuracy  = 0.8950
 Training loss = 0.3064
 
-Validation accuracy = 76.05
-Validation loss = 0.79.23
+Validation accuracy = 0.7605
+Validation loss = 0.7923
 
 Test accuracy = 0.7605
 Test loss = 0.7923
@@ -40,7 +40,20 @@ Test loss = 0.9143
 Acc graph name = acc_3-fully-relu_wo_dropout.png
 Loss graph name =  loss_3-fully-relu_wo_dropout.png
 
-## 4 fully connected layers - relu activation - with dropout
+## 3 fully connected layers - tanh activation - with dropout
+Training accuracy = 0.8799
+Training loss = 0.3419
+
+Validation accuracy = 0.7599
+Validation loss = 0.8001
+
+Test accuracy = 0.8001
+Test loss = 0.7599
+
+Acc graph name = acc_3-fully-tanh_w_dropout.png
+Loss graph name =  loss_3-fully-tanh_w_dropout.png
+
+## 3 fully connected layers - relu activation - with dropout
 Training accuracy = 0.8376
 Training loss = 0.4804
 
@@ -52,6 +65,20 @@ Test loss = 0.8889
 
 Acc graph name = acc_3-fully-relu_w_dropout.png
 Loss graph name =  loss_3-fully-relu_w_dropout.png
+
+
+## 3 fully connected layers - relu activation - with dropout - with normalization
+Training accuracy = 0.8231
+Training loss = 0.5256
+
+Validation accuracy = 0.7416
+Validation loss = 0.8409
+
+Test accuracy = 0.7416
+Test loss = 0.8409
+
+Acc graph name = acc_3-fully-relu-norm_w_dropout.png
+Loss graph name =  loss_3-fully-relu-norm_w_dropout.png
 
 # Keras example CNN
 The training is done on 10 epochs
