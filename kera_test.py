@@ -11,7 +11,7 @@ import os
 
 batch_size = 32
 num_classes = 10
-epochs = 10
+epochs = 25
 save_dir = os.path.join(os.getcwd(), 'saved_models')
 model_name = 'keras_cifar10_trained_model.h5'
 
@@ -88,7 +88,7 @@ plt.plot(history.history['val_acc'])
 plt.title('Model accuracy')
 plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
-plt.legend(['Train', 'Val'], loc='upper left')
+plt.legend(['Train', 'Test'], loc='upper left')
 plt.show()
 
 # Plot training & validation loss values
@@ -97,7 +97,7 @@ plt.plot(history.history['val_loss'])
 plt.title('Model loss')
 plt.ylabel('Loss')
 plt.xlabel('Epoch')
-plt.legend(['Train', 'Val'], loc='upper left')
+plt.legend(['Train', 'Test'], loc='upper left')
 plt.show()
 
 # plot_model(model, to_file='model.png')
