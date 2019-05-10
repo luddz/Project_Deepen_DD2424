@@ -13,13 +13,13 @@ import matplotlib.pyplot as plt
 
 batch_size = 32
 num_classes = 10
-epochs = 50
-data_augmentation = False
+epochs = 25
+data_augmentation = True
 dropout = True
 batchNorm = True
 num_predictions = 20
 save_dir = os.path.join(os.getcwd(), 'saved_models')
-model_name = 'keras_cifar10_trained_model.h5'
+model_name = 'alex_25_cifar10_trained_model.h5'
 
 # The data, split between train and test sets:
 (x_train, y_train), (x_test, y_test) = cifar10.load_data()

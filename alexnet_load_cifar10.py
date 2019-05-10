@@ -13,8 +13,8 @@ import matplotlib.pyplot as plt
 
 batch_size = 32
 num_classes = 10
-epochs = 50
-data_augmentation = False
+epochs = 25
+data_augmentation = True
 dropout = True
 batchNorm = True
 num_predictions = 20
