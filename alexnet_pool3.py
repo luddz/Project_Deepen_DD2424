@@ -6,14 +6,14 @@ from keras.models import Sequential, load_model
 from keras.layers import Dense, Dropout, Activation, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers.normalization import BatchNormalization
-
+import numpy as np
 import os
 
 import matplotlib.pyplot as plt
 
 batch_size = 32
 num_classes = 10
-epochs = 50
+epochs = 10
 data_augmentation = True
 dropout = True
 batchNorm = True
