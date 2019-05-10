@@ -15,7 +15,7 @@ batch_size = 32
 num_classes = 10
 epochs = 10
 data_augmentation = True
-dropout = True
+droping = True
 batchNorm = True
 num_predictions = 20
 save_dir = os.path.join(os.getcwd(), 'saved_models')
@@ -49,7 +49,7 @@ if batchNorm: model.add(BatchNormalization())
 
 # Max Pooling
 model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
-if dropout: model.add(dropout(0.2))
+if droping: model.add(Dropout(0.2))
 
 # 2nd Convolutional Layer
 model.add(Conv2D(filters=96, kernel_size=(3,3), padding='same'))
@@ -58,7 +58,7 @@ if batchNorm: model.add(BatchNormalization())
 
 # Max Pooling
 model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
-if dropout: model.add(dropout(0.3))
+if droping: model.add(Dropout(0.3))
 
 # 3rd Convolutional Layer
 model.add(Conv2D(filters=192, kernel_size=(3,3), padding='same'))
@@ -72,7 +72,7 @@ if batchNorm: model.add(BatchNormalization())
 
 # Max pooling
 model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
-if dropout: model.add(dropout(0.4))
+if droping: model.add(Dropout(0.4))
 
 # 5th Convolutional Layer
 model.add(Conv2D(filters=256, kernel_size=(3,3), padding='same'))
@@ -81,7 +81,7 @@ if batchNorm: model.add(BatchNormalization())
 
 # Max Pooling
 model.add(MaxPooling2D(pool_size=(2,2), strides=(2,2)))
-if dropout: model.add(dropout(0.5))
+if droping: model.add(Dropout(0.5))
 # Passing it to a Fully Connected layer
 model.add(Flatten())
 # 1st Fully Connected Layer
